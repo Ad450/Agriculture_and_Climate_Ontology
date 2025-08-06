@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:ca="http://example.org/climate-agriculture#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#canBeAdaptedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#Crop"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#AdaptationStrategy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#mitigatedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#ClimateFactor"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#MitigationStrategy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#Region">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#growsIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#Crop"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#Region"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#Maize">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#Crop"/>
+    <ca:growsIn rdf:resource="http://example.org/climate-agriculture#WestAfrica"/>
+    <ca:vulnerableTo rdf:resource="http://example.org/climate-agriculture#Drought"/>
+    <ca:canBeAdaptedWith rdf:resource="http://example.org/climate-agriculture#DroughtTolerantSeeds"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#affectsYield">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#Impact"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#Crop"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#NPKFertilizer">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#Fertilizer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#emits">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#ClimateFactor"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#GreenhouseGas"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#ClimatePolicy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#YieldLoss">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#Impact"/>
+    <ca:affectsYield rdf:resource="http://example.org/climate-agriculture#Maize"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#thrivesIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#Crop"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#SoilType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#Drought">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#ClimateFactor"/>
+    <ca:hasImpact rdf:resource="http://example.org/climate-agriculture#YieldLoss"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#linkedTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#WeatherPattern"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#ClimateFactor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#ElNino">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#WeatherPattern"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#Locust">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#Pest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#hasImpact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#ClimateFactor"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#Impact"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#DripIrrigation">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#IrrigationMethod"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#ParisAgreement">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#ClimatePolicy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#suffersFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#Crop"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#CropDisease"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#MaizeBlight">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#CropDisease"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#WeatherPattern">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#regulatedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#GreenhouseGas"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#ClimatePolicy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#Methane">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#GreenhouseGas"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#irrigatedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#Crop"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#IrrigationMethod"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#uses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#Crop"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#Fertilizer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#ClimateFactor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#vulnerableTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#Crop"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#ClimateFactor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#Impact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#CropDisease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#WestAfrica">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#Region"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#Pest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#IrrigationMethod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#GreenhouseGas">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#damagedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#Crop"/>
+    <rdfs:range rdf:resource="http://example.org/climate-agriculture#Pest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#Fertilizer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#CarbonTax">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#MitigationStrategy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#DroughtTolerantSeeds">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#AdaptationStrategy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#CO2">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#GreenhouseGas"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#Crop">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#AdaptationStrategy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#MitigationStrategy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#SoilType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#LoamySoil">
+    <rdf:type rdf:resource="http://example.org/climate-agriculture#SoilType"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#hasAverageYield">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  <rdfs:domain rdf:resource="http://example.org/climate-agriculture#Crop"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  <rdfs:comment>Average yield of the crop in tons per hectare</rdfs:comment>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#hasOptimalTemperature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#Crop"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment>Optimal temperature for crop growth in degrees Celsius</rdfs:comment>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/climate-agriculture#hasSoilPH">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://example.org/climate-agriculture#SoilType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment>Soil pH level</rdfs:comment>
+  </rdf:Description>
+
+</rdf:RDF>
